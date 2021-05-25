@@ -6,6 +6,7 @@ return [
     "email" =>  "Email",
     "content" => "Content",
     "create" => "Register",
+    "name_id" => "NameID",
 
 ];
 

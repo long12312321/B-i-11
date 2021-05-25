@@ -20,6 +20,15 @@
 </div>
 <form action="{{ route('add') }}" method="post" >
 @csrf
+@if(isset($data))
+@foreach($data as $data)
+  {{__('language.name_id')}} &nbsp <input type="text" name="name_id" value="{{$data->id}}" required>
+@endforeach
+@else
+{{__('language.name_id')}} &nbsp <input type="text" name="name_id" value="" required>
+@endif
+<br>
+<br>
 {{__('language.name')}} &nbsp <input type="text" id="name" name="name" required>
 <br>
 <br>
@@ -31,13 +40,18 @@
 <br>
 {{__('language.content')}} &nbsp <input type="text" id="content" name="content" required>
 
+
 <br>
 <br>
 <input type="submit"  name="create" value="{{__('language.create')}}">
-
 </form>
+<a href="{{ route('logout')}}">LogOut</a>
+<br>
+<br>
+
 </body>
 
 </html>
+
 
 

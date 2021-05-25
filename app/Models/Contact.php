@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
-     use HasFactory;
-     protected $table = 'contact';
+    use HasFactory;
+    protected $table = 'contacts';
      public $timestamps = false;
 }

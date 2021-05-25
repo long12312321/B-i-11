@@ -18,7 +18,11 @@ Route::get('/', function () {
 Route::get('home','HomeController@index')->name('create');
 Route::post('add','AddController@add')->name('add');
 Route::get('language/{language}','LanguageController@index')-> name('lan');
-
+Route::get('login','LoginController@getLogin')->name('login');
+Route::post('login','LoginController@postLogin')->name('lo');
+Route::get('logout','LoginController@logout')->name('logout');
+Route::get('register','RegisterController@getRegister')->name('re');
+Route::post('register','RegisterController@postRegister')->name('reg');
 // Route::prefix('home') ->group(function(){
    
 // });

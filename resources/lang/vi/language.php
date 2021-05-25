@@ -6,7 +6,7 @@ return [
     "email" =>  "Thư Điện Tử",
     "content" => "Nội Dung",
     "create" => "Đăng kí",
-
+    "name_id" => "TênID",
 ];
 
 

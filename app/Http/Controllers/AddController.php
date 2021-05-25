@@ -13,12 +13,13 @@ class AddController extends Controller
                 $address = $request->input("address");
                 $email = $request->input("email");
                 $content = $request->input("content");
-
+                $name_id =$request->input("name_id");
                 $contact = new Contact();
                 $contact->name = $name;
                 $contact->address = $address;
                 $contact->email = $email;
                 $contact->content=$content;
+                $contact->users_id=$name_id;
 
                 $contact->save();
             }
